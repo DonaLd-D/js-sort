@@ -6,7 +6,7 @@
 - 这步做完后，最后的元素会是最大的数。
 - 针对所有的元素重复以上的步骤，除了最后一个。
 - 持续每次对越来越少的元素重复上面的步骤，直到没有任何一对数字需要比较。
-```
+```js
 function bubbleSort(arr) {
     var len = arr.length;
     for (var i = 0; i < len - 1; i++) {
@@ -27,7 +27,7 @@ function bubbleSort(arr) {
 - 再从剩余未排序元素中继续寻找最小（大）元素，然后放到已排序序列的末尾。
 - 重复第二步，直到所有元素均排序完毕。
 
-```
+```js
 function selectionSort(arr) {
     var len = arr.length;
     var minIndex, temp;
@@ -50,7 +50,7 @@ function selectionSort(arr) {
 - 将第一待排序序列第一个元素看做一个有序序列，把第二个元素到最后一个元素当成是未排序序列。
 - 从头到尾依次扫描未排序序列，将扫描到的每个元素插入有序序列的适当位置。（如果待插入的元素与有序序列中的某个元素相等，则将待插入元素插入到相等元素的后面。）
 
-```
+```js
 function insertionSort(arr) {
     var len = arr.length;
     var preIndex, current;
