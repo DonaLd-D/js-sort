@@ -21,6 +21,25 @@ function bubbleSort(arr) {
     return arr;
 }
 ```
+```js
+function bubblesort(arr){
+    if(!(Array.isArray(arr))){
+        return arr
+    }
+    let i=0
+    while(i<arr.length-1){
+        for(let j=0;j<arr.length-1-i;j++){
+            let temp=arr[j+1]
+            if(arr[j]>arr[j+1]){
+                arr[j+1]=arr[j]
+                arr[j]=temp
+            }
+            i++
+        }
+    }
+    return arr
+}
+```
 
 ### 2. 选择排序
 - 首先在未排序序列中找到最小（大）元素，存放到排序序列的起始位置。
