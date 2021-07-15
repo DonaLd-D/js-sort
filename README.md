@@ -101,6 +101,7 @@ function quicksort(arr){
     for(let i=0;i<arr.length;i++){
         arr[i]>baseIndex?right.push(arr[i]):left.push(arr[i])
     }
+    //return quicksort(left).concat([baseIndex],quicksort(right))
     return [...quicksort(left),baseIndex,...quicksort(right)]
 }
 ```
