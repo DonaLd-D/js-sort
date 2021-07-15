@@ -80,7 +80,7 @@ function quicksort(arr){
     let left=[]
     let right=[]
     for(let i=0;i<arr.length;i++){
-        arr[i]>baseIndex?right.push(arr[i]):right.push(arr[i])
+        arr[i]>baseIndex?right.push(arr[i]):left.push(arr[i])
     }
     return [...quicksort(left),baseIndex,...quicksort(right)]
 }
