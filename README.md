@@ -70,6 +70,21 @@ function insertionSort(arr) {
 ### 4. 希尔排序
 ### 5. 归并排序
 ### 6. 快速排序
+```js
+function quicksort(arr){
+    if(!(arr instanceof Array)){
+        return arr
+    }
+    let base=Math.floor(arr.length/2)
+    let baseIndex=arr.splice(base,1)[0]
+    let left=[]
+    let right=[]
+    for(let i=0;i<arr.length;i++){
+        arr[i]>baseIndex?right.push(arr[i]):right.push(arr[i])
+    }
+    return [...quicksort(left),baseIndex,...quicksort(right)]
+}
+```
 ### 7. 堆排序
 ### 8. 计数排序
 ### 9. 桶排序
